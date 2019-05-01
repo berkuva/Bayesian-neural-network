@@ -1,3 +1,13 @@
 # Vision-course-project
 
 Artificial neural networks have proven to be powerful atidentifying patterns between the distributions of input andoutput data. However, if an input is not within the distribu-tion that the model was trained on, and hence the model isunsure which class it belongs to, the model should be ableto ”reject” to classify it rather than guessing with low con-fidence.  In conventional neural networks, the values of theparameters after training are fixed scalars that the modeluses to classify inputs.  Hence, given a fixed input, the net-work will always classify it identically.  On the other hand,in the Bayesian context, each parameter is a random vari-able with an associated probability distribution.   As a re-sult,  training  each  parameter  distribution  initiates  with  aprior distribution and updates its latent variables, the meanand  the  standard  deviation.   Once  trained,  the  values  ofthe  parameters  are  sampled  from  the  corresponding  dis-tributions,  allowing the model to make different inferencefor an identical input.  This project compares the trainingprocess and evaluates the performance difference betweenconventional and Bayesian neural networks.  To highlight,the Bayesian neural network containing one hidden layerwith  the  ability  to  reject  to  classify  achieved  65.69%  in-ference accuracy on the CIFAR-10 dataset [2], whereas aconventional fully connected neural network with the samedepth achieved 30.84% and a convolutional neural networkachieved 45.79%.
+
+The top 6 images were classified by the neural network while the bottom 6 were rejected to be classified because it was uncertain about them. They indeed look more ambiguous than the top 6 images.
+![alt text](https://github.com/hyunjaecho94/Vision-course-project/blob/master/images/Screen%20Shot%202019-05-01%20at%204.54.18%20PM.png)
+
+The top image is what a neural network looks like after training. Notice the parameters are fixed scalar values. In a Bayesian neural network, the parameters are distributions, represented with a mean and a standard deviation. Given an input image, a conventional neural network will always classify it identically, while a Bayesian neural network may not because its parameters are sampled from corresponding distributions.
+![alt text](https://github.com/hyunjaecho94/Vision-course-project/blob/master/images/Screen%20Shot%202019-05-01%20at%204.54.25%20PM.png)
+
+![alt text](https://github.com/hyunjaecho94/Vision-course-project/blob/master/images/Screen%20Shot%202019-05-01%20at%204.54.34%20PM.png)
+
+![alt text](https://github.com/hyunjaecho94/Vision-course-project/blob/master/images/Screen%20Shot%202019-05-01%20at%204.55.45%20PM.png)
